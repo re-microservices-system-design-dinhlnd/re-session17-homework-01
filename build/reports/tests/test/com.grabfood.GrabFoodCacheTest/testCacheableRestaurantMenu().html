@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - testCacheableRestaurantMenu()</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<div class="breadcrumbs">
+<a class="breadcrumb" href="../index.html">all</a> &gt; 
+<a class="breadcrumb" href="index.html">com.grabfood.GrabFoodCacheTest</a> &gt; 
+<span class="breadcrumb">testCacheableRestaurantMenu()</span>
+</div>
+<div class="tab-container">
+<ul class="tabLinks">
+<li>
+<a class="successGroup" href="#">Gradle Test Run :test</a>
+</li>
+</ul>
+<div class="tab">
+<h2>Gradle Test Run :test</h2>
+<h1>Kiểm tra @Cacheable lưu danh sách món ăn theo restaurantId dưới dạng JSON</h1>
+<div class="tab-container">
+<ul class="tabLinks">
+<li>
+<a class="" href="#">summary</a>
+</li>
+<li>
+<a class="" href="#">standard output</a>
+</li>
+<li>
+<a class="" href="#">error output</a>
+</li>
+</ul>
+<div class="tab">
+<h2>summary</h2>
+<div>
+<div class="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox">
+<div class="counter">0</div>
+<p>skipped</p>
+</div>
+</td>
+<td>
+<div class="infoBox duration">
+<div class="counter">2.607s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="tab">
+<h2>standard output</h2>
+<span class="code">
+<pre id="root-0-test-stdout-testCacheableRestaurantMenu()">2026-09-27T18:50:19.169+07:00  INFO 19328 --- [grabfood-cache-service] [    Test worker] com.grabfood.service.MenuService         : &gt;&gt;&gt; [CACHE EVICT] Đã xóa cache thực đơn của nhà hàng: RES-TEST-888
+2026-09-27T18:50:19.747+07:00  INFO 19328 --- [grabfood-cache-service] [    Test worker] com.grabfood.service.MenuService         : &gt;&gt;&gt; [DATABASE QUERY] Đang truy vấn CSDL lấy danh sách món ăn cho nhà hàng: RES-TEST-888
+2026-09-27T18:50:20.764+07:00  INFO 19328 --- [grabfood-cache-service] [    Test worker] com.grabfood.service.MenuService         : &gt;&gt;&gt; [DATABASE RESULT] Đã tải thành công 4 món ăn cho nhà hàng: RES-TEST-888
+&gt;&gt;&gt; [Lần 1 - Cache Miss] Thời gian: 1074ms
+&gt;&gt;&gt; [Lần 2 - Cache Hit] Thời gian: 25ms
+2026-09-27T18:50:20.851+07:00 DEBUG 19328 --- [grabfood-cache-service] [    Test worker] o.s.d.redis.core.RedisConnectionUtils    : Fetching Redis Connection from RedisConnectionFactory
+2026-09-27T18:50:20.866+07:00 DEBUG 19328 --- [grabfood-cache-service] [    Test worker] o.s.d.redis.core.RedisConnectionUtils    : Closing Redis Connection
+&gt;&gt;&gt; [REDIS RAW DATA - restaurant_menu]:
+[&quot;java.util.ArrayList&quot;,[{&quot;@class&quot;:&quot;com.grabfood.model.MenuItem&quot;,&quot;id&quot;:1,&quot;name&quot;:&quot;Phở&quot;,&quot;price&quot;:[&quot;java.math.BigDecimal&quot;,65000],&quot;description&quot;:&quot;Phở bò tái nạm gầu gân kèm quẩy giòn và trứng chần&quot;,&quot;category&quot;:&quot;Món nước&quot;,&quot;restaurantId&quot;:&quot;RES-TEST-888&quot;,&quot;available&quot;:true},{&quot;@class&quot;:&quot;com.grabfood.model.MenuItem&quot;,&quot;id&quot;:2,&quot;name&quot;:&quot;Cơm Tấm Sườn Bì Chả&quot;,&quot;price&quot;:[&quot;java.math.BigDecimal&quot;,55000],&quot;description&quot;:&quot;Cơm tấm hạt tấm thơm, sườn nướng mật ong đậm đà&quot;,&quot;category&quot;:&quot;Cơm&quot;,&quot;restaurantId&quot;:&quot;RES-TEST-888&quot;,&quot;available&quot;:true},{&quot;@class&quot;:&quot;com.grabfood.model.MenuItem&quot;,&quot;id&quot;:3,&quot;name&quot;:&quot;Bánh Mì Pate Chả Lụa&quot;,&quot;price&quot;:[&quot;java.math.BigDecimal&quot;,30000],&quot;description&quot;:&quot;Bánh mì giòn rụm kẹp pate béo ngậy, sốt bơ trứng truyền thống&quot;,&quot;category&quot;:&quot;Món nhẹ&quot;,&quot;restaurantId&quot;:&quot;RES-TEST-888&quot;,&quot;available&quot;:true},{&quot;@class&quot;:&quot;com.grabfood.model.MenuItem&quot;,&quot;id&quot;:4,&quot;name&quot;:&quot;Trà Sữa Trân Châu Đường Đen&quot;,&quot;price&quot;:[&quot;java.math.BigDecimal&quot;,45000],&quot;description&quot;:&quot;Trà sữa sữa tươi trân châu đường đen Đài Loan thơm ngon&quot;,&quot;category&quot;:&quot;Đồ uống&quot;,&quot;restaurantId&quot;:&quot;RES-TEST-888&quot;,&quot;available&quot;:true}]]
+2026-09-27T18:50:20.867+07:00  INFO 19328 --- [grabfood-cache-service] [    Test worker] com.grabfood.service.MenuService         : &gt;&gt;&gt; [CACHE EVICT] Đã xóa cache thực đơn của nhà hàng: RES-TEST-888
+</pre>
+<button class="clipboard-copy-btn" aria-label="Copy to clipboard" data-copy-element-id="root-0-test-stdout-testCacheableRestaurantMenu()">Copy</button>
+</span>
+</div>
+<div class="tab">
+<h2>error output</h2>
+<span class="code">
+<pre id="root-0-test-stderr-testCacheableRestaurantMenu()">WARNING: A Java agent has been loaded dynamically (C:\Users\Admin\.gradle\caches\modules-2\files-2.1\net.bytebuddy\byte-buddy-agent\1.14.19\154da3a65b4f4a909d3e5bdec55d1b2b4cbb6ce1\byte-buddy-agent-1.14.19.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+</pre>
+<button class="clipboard-copy-btn" aria-label="Copy to clipboard" data-copy-element-id="root-0-test-stderr-testCacheableRestaurantMenu()">Copy</button>
+</span>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="https://www.gradle.org">Gradle 9.7.1</a> at Sep 27, 2026, 6:50:21 PM</p>
+</div>
+</div>
+</body>
+</html>

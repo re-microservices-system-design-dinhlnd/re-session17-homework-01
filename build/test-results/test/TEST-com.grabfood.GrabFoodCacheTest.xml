@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.grabfood.GrabFoodCacheTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-09-27T11:50:15.059Z" hostname="BON" time="6.652">
+  <properties/>
+  <testcase name="Kiểm tra @Cacheable lưu danh sách món ăn theo restaurantId dưới dạng JSON" classname="com.grabfood.GrabFoodCacheTest" time="2.607"/>
+  <testcase name="Kiểm tra kết nối tới Redis thành công (PING - PONG)" classname="com.grabfood.GrabFoodCacheTest" time="0.007"/>
+  <testcase name="Kiểm tra @Cacheable lưu món ăn đơn lẻ theo dish id dưới dạng JSON" classname="com.grabfood.GrabFoodCacheTest" time="0.813"/>
+  <system-out><![CDATA[18:50:15.234 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.grabfood.GrabFoodCacheTest]: GrabFoodCacheTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+18:50:15.338 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.grabfood.GrabFoodApplication for test class com.grabfood.GrabFoodCacheTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.4)
+
+2026-09-27T18:50:15.899+07:00  INFO 19328 --- [grabfood-cache-service] [    Test worker] com.grabfood.GrabFoodCacheTest           : Starting GrabFoodCacheTest using Java 21.0.6 with PID 19328 (started by Admin in D:\[IT-214] Microservices System Design\Ss17\1)
+2026-09-27T18:50:15.901+07:00 DEBUG 19328 --- [grabfood-cache-service] [    Test worker] com.grabfood.GrabFoodCacheTest           : Running with Spring Boot v3.3.4, Spring v6.1.13
+2026-09-27T18:50:15.902+07:00  INFO 19328 --- [grabfood-cache-service] [    Test worker] com.grabfood.GrabFoodCacheTest           : No active profile set, falling back to 1 default profile: "default"
+2026-09-27T18:50:16.767+07:00  INFO 19328 --- [grabfood-cache-service] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-09-27T18:50:16.771+07:00  INFO 19328 --- [grabfood-cache-service] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-09-27T18:50:16.813+07:00  INFO 19328 --- [grabfood-cache-service] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 0 Redis repository interfaces.
+2026-09-27T18:50:17.241+07:00  INFO 19328 --- [grabfood-cache-service] [    Test worker] com.grabfood.config.CacheConfig          : =================================================================
+2026-09-27T18:50:17.241+07:00  INFO 19328 --- [grabfood-cache-service] [    Test worker] com.grabfood.config.CacheConfig          : Initializing RedisConnectionFactory with Lettuce Driver:
+2026-09-27T18:50:17.241+07:00  INFO 19328 --- [grabfood-cache-service] [    Test worker] com.grabfood.config.CacheConfig          :   -> Host: localhost
+2026-09-27T18:50:17.243+07:00  INFO 19328 --- [grabfood-cache-service] [    Test worker] com.grabfood.config.CacheConfig          :   -> Port: 6379
+2026-09-27T18:50:17.243+07:00  INFO 19328 --- [grabfood-cache-service] [    Test worker] com.grabfood.config.CacheConfig          :   -> Timeout: PT2S
+2026-09-27T18:50:17.243+07:00  INFO 19328 --- [grabfood-cache-service] [    Test worker] com.grabfood.config.CacheConfig          :   -> Lettuce Pool Max-Active: 10
+2026-09-27T18:50:17.244+07:00  INFO 19328 --- [grabfood-cache-service] [    Test worker] com.grabfood.config.CacheConfig          : =================================================================
+2026-09-27T18:50:17.460+07:00  INFO 19328 --- [grabfood-cache-service] [    Test worker] com.grabfood.config.CacheConfig          : Configuring RedisCacheManager with GenericJackson2JsonRedisSerializer (JSON format)
+2026-09-27T18:50:18.190+07:00 DEBUG 19328 --- [grabfood-cache-service] [    Test worker] o.s.d.r.l.RedisMessageListenerContainer  : Starting RedisMessageListenerContainer...
+2026-09-27T18:50:18.191+07:00 DEBUG 19328 --- [grabfood-cache-service] [    Test worker] o.s.d.r.l.RedisMessageListenerContainer  : Postpone listening for Redis messages until actual listeners are added
+2026-09-27T18:50:18.258+07:00  INFO 19328 --- [grabfood-cache-service] [    Test worker] com.grabfood.GrabFoodCacheTest           : Started GrabFoodCacheTest in 2.719 seconds (process running for 4.833)
+2026-09-27T18:50:19.169+07:00  INFO 19328 --- [grabfood-cache-service] [    Test worker] com.grabfood.service.MenuService         : >>> [CACHE EVICT] Đã xóa cache thực đơn của nhà hàng: RES-TEST-888
+2026-09-27T18:50:19.747+07:00  INFO 19328 --- [grabfood-cache-service] [    Test worker] com.grabfood.service.MenuService         : >>> [DATABASE QUERY] Đang truy vấn CSDL lấy danh sách món ăn cho nhà hàng: RES-TEST-888
+2026-09-27T18:50:20.764+07:00  INFO 19328 --- [grabfood-cache-service] [    Test worker] com.grabfood.service.MenuService         : >>> [DATABASE RESULT] Đã tải thành công 4 món ăn cho nhà hàng: RES-TEST-888
+>>> [Lần 1 - Cache Miss] Thời gian: 1074ms
+>>> [Lần 2 - Cache Hit] Thời gian: 25ms
+2026-09-27T18:50:20.851+07:00 DEBUG 19328 --- [grabfood-cache-service] [    Test worker] o.s.d.redis.core.RedisConnectionUtils    : Fetching Redis Connection from RedisConnectionFactory
+2026-09-27T18:50:20.866+07:00 DEBUG 19328 --- [grabfood-cache-service] [    Test worker] o.s.d.redis.core.RedisConnectionUtils    : Closing Redis Connection
+>>> [REDIS RAW DATA - restaurant_menu]:
+["java.util.ArrayList",[{"@class":"com.grabfood.model.MenuItem","id":1,"name":"Phở","price":["java.math.BigDecimal",65000],"description":"Phở bò tái nạm gầu gân kèm quẩy giòn và trứng chần","category":"Món nước","restaurantId":"RES-TEST-888","available":true},{"@class":"com.grabfood.model.MenuItem","id":2,"name":"Cơm Tấm Sườn Bì Chả","price":["java.math.BigDecimal",55000],"description":"Cơm tấm hạt tấm thơm, sườn nướng mật ong đậm đà","category":"Cơm","restaurantId":"RES-TEST-888","available":true},{"@class":"com.grabfood.model.MenuItem","id":3,"name":"Bánh Mì Pate Chả Lụa","price":["java.math.BigDecimal",30000],"description":"Bánh mì giòn rụm kẹp pate béo ngậy, sốt bơ trứng truyền thống","category":"Món nhẹ","restaurantId":"RES-TEST-888","available":true},{"@class":"com.grabfood.model.MenuItem","id":4,"name":"Trà Sữa Trân Châu Đường Đen","price":["java.math.BigDecimal",45000],"description":"Trà sữa sữa tươi trân châu đường đen Đài Loan thơm ngon","category":"Đồ uống","restaurantId":"RES-TEST-888","available":true}]]
+2026-09-27T18:50:20.867+07:00  INFO 19328 --- [grabfood-cache-service] [    Test worker] com.grabfood.service.MenuService         : >>> [CACHE EVICT] Đã xóa cache thực đơn của nhà hàng: RES-TEST-888
+>>> [TEST PASSED] Redis Connection PING -> PONG
+2026-09-27T18:50:20.900+07:00  INFO 19328 --- [grabfood-cache-service] [    Test worker] com.grabfood.service.MenuService         : >>> [CACHE EVICT] Đã xóa cache món ăn id: 1
+2026-09-27T18:50:20.903+07:00  INFO 19328 --- [grabfood-cache-service] [    Test worker] com.grabfood.service.MenuService         : >>> [DATABASE QUERY] Đang truy vấn CSDL lấy chi tiết món ăn id: 1
+2026-09-27T18:50:21.708+07:00 DEBUG 19328 --- [grabfood-cache-service] [    Test worker] o.s.d.redis.core.RedisConnectionUtils    : Fetching Redis Connection from RedisConnectionFactory
+2026-09-27T18:50:21.709+07:00 DEBUG 19328 --- [grabfood-cache-service] [    Test worker] o.s.d.redis.core.RedisConnectionUtils    : Closing Redis Connection
+>>> [REDIS RAW DATA - dish]:
+{"@class":"com.grabfood.model.MenuItem","id":1,"name":"Phở","price":["java.math.BigDecimal",65000],"description":"Phở bò Hà Nội gia truyền, nước dùng xương hầm 24 giờ","category":"Món nước","restaurantId":"RES-001","available":true}
+2026-09-27T18:50:21.709+07:00  INFO 19328 --- [grabfood-cache-service] [    Test worker] com.grabfood.service.MenuService         : >>> [CACHE EVICT] Đã xóa cache món ăn id: 1
+]]></system-out>
+  <system-err><![CDATA[WARNING: A Java agent has been loaded dynamically (C:\Users\Admin\.gradle\caches\modules-2\files-2.1\net.bytebuddy\byte-buddy-agent\1.14.19\154da3a65b4f4a909d3e5bdec55d1b2b4cbb6ce1\byte-buddy-agent-1.14.19.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+</testsuite>
